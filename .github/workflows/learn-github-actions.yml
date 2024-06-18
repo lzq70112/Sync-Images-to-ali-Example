@@ -40,4 +40,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://quay.io/prometheus/node-exporter:v1.8.1 docker://registry.cn-hangzhou.aliyuncs.com/test/node-exporter:v1.8.1
+        skopeo copy --all docker://quay.io/prometheus/node-exporter:v1.8.1 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/node-exporter:v1.8.1
