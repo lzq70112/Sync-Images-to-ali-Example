@@ -40,4 +40,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://docker.io/library/alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/alpine
+        skopeo copy --all docker://docker.io/iamseth/oracledb_exporter docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/oracledb_exporter
