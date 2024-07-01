@@ -40,4 +40,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://docker.io/truevoly/oracle-12c docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/oracle-12c
+        skopeo copy --all docker://quay.io/prometheus/blackbox-exporter:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/blackbox-exporter:latest 
