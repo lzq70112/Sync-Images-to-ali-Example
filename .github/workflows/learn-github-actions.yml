@@ -40,4 +40,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://quay.io/prometheus/blackbox-exporter:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/blackbox-exporter:latest 
+        skopeo copy --all docker.io/bitnami/postgresql:16.1.0-debian-11-r15 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/postgresql:16.1.0-debian-11-r15
