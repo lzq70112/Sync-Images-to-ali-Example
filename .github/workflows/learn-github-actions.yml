@@ -34,10 +34,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 # 在GitHub仓库的Secrets中设置这个密码  
       run: |  
-        echo "$password" | docker login --username="$username" --password-stdin registry.cn-hangzhou.aliyuncs.com
+        echo "$password" | docker login --username="$username" --password-stdin registry.cn-hangzhou.aliyuncs.com/lzq70112//postgresql:16.1.0-debian-11-r15
     
     # 使用shell命令批量同步所需的镜像到阿里云镜像仓库中
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://docker.io/bitnami/postgresql:16.1.0-debian-11-r15 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112//docker.io/bitnami/postgresql:16.1.0-debian-11-r15
+        skopeo copy --all docker://docker.io/bitnami/postgresql:16.1.0-debian-11-r15 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112//postgresql:16.1.0-debian-11-r15
