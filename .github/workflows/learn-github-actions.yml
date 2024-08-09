@@ -40,4 +40,5 @@ jobs:
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
+        skopeo verison
         skopeo copy --all docker://docker.io/avivace/ror2server docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/ror2server
