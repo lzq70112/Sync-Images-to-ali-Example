@@ -40,4 +40,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://docker.io/bitnami/nginx docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx
+        skopeo copy --all docker://docker.io/bitnami/postgresql:16.1.0-debian-11-r50 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/postgresql:16.1.0-debian-11-r50
