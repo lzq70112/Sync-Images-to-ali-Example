@@ -19,14 +19,14 @@ on:
 # 工作流程任务（通常含有一个或多个步骤）
 jobs:
   syncimages:
-    runs-on: ubuntu-latest
+    runs-on: docker:20.10.3-git
     # 在job中添加步骤来执行同步操作。在上述job中，添加步骤来执行skopeo命令，从registry.k8s.io仓库拉取镜像，并将其推送到阿里云仓库。
     steps:
     - name: Checkout Repos
       uses: actions/checkout@v3
       
     - name: Set up Docker Buildx
-      uses: docker/docker:20.10.3-git
+      uses: docker/setup-buildx-action@v2.9.1
     # 登录到阿里云镜像仓库  
     - name: Login to Alibaba Cloud Container Registry  
       env:  
