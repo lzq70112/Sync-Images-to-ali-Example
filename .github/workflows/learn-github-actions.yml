@@ -40,4 +40,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://registry.developers.crunchydata.com/crunchydata/crunchy-postgres:ubi8-16.3-0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/crunchy-postgres:ubi8-16.3-0
+        skopeo copy --all docker://registry.developers.crunchydata.com/crunchydata/crunchy-postgres:ubi8-16.4-0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/crunchy-postgres:ubi8-16.4-0
