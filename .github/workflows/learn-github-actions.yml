@@ -40,4 +40,4 @@ jobs:
     - name: Use Skopeo Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        skopeo copy --all docker://docker.io/ubantu docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/ubantu
+        skopeo copy --all docker://docker.io/ubuntu docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/ubuntu
