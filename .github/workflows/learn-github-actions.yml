@@ -45,6 +45,6 @@ jobs:
         curl -fsSL ${REPO_URL}/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/skopeo.gpg > /dev/null
         
         sudo apt update
-        sudo apt install skopeo
-        skopeo copy  --all  --sbom=false --provenance=false  docker://docker.io/avivace/ror2server docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/ror2server 
+        sudo apt install skopeo -y
+        skopeo copy  --all    docker://docker.io/avivace/ror2server docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/ror2server 
 
