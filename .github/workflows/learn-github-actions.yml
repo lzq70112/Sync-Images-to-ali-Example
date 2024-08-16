@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://delron/fastdfs docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/fastdfs
+        skopeo copy --all docker://ghcr.io/iamseth/oracledb_exporter:0.6.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/oracledb_exporter:0.6.0
