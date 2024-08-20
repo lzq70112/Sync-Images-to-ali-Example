@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://golang:1.22.2-ubuntu docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/golang:1.22.2-ubuntu
+        skopeo copy --all docker://node:22.6.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/node:22.6.0
