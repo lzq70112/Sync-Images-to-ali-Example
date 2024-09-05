@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://docker.io/bitnami/kafka-exporter:1.4.2-debian-10-r87 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/kafka-exporter:1.4.2-debian-10-r87
+        skopeo copy --all docker://nginx:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx:latest
