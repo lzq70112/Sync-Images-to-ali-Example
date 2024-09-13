@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://docker.io/daprio/dapr:1.7.1 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/dapr:1.7.1
+        skopeo copy --all docker://ubuntu docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/ubuntu
