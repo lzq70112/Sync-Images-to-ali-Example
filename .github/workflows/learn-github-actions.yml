@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/alpine
+        skopeo copy --all docker://tomcat:8.5.40 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/tomcat:8.5.40
