@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://registry.k8s.io/sig-storage/smbplugin:v1.16.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/smbplugin:v1.16.0
+        skopeo copy --all docker://registry.k8s.io/sig-storage/csi-provisioner:v5.0.2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/csi-provisioner:v5.0.2
