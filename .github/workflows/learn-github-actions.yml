@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/alpine
+        skopeo copy --all docker://registry.k8s.io/sig-storage/smbplugin docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/smbplugin
