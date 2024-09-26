@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://ghcr.io/kubernetes-sigs/sig-windows/csi-proxy:v1.1.2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/csi-proxy:v1.1.2
+        skopeo copy --all docker://alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/alpine
