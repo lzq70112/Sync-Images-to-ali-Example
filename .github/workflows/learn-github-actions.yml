@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://kibana:7.2.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/kibana:7.2.0
+        skopeo copy --all docker://minio/minio docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/minio
