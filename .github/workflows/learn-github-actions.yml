@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://busybox:1.32 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/busybox:1.32
+        skopeo copy --all docker://percona/percona-server:8.0.21 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/percona-server:8.0.21
