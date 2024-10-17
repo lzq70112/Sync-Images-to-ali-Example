@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://percona/percona-server:8.0.21 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/percona-server:8.0.21
+        skopeo copy --all docker://radondb/mysql80-sidecar:v3.0.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysql80-sidecar:v3.0.0
