@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://radondb/mysql80-sidecar:v3.0.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysql80-sidecar:v3.0.0
+        skopeo copy --all docker://gcr.azk8s.cn/google_containers/volume-nfs:0.8 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/volume-nfs:0.8
