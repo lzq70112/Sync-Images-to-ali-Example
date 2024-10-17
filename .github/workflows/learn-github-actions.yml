@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://prom/mysqld-exporter:v0.12.1 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysqld-exporter:v0.12.1
+        skopeo copy --all docker://radondb/mysql57-sidecar:v3.0.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysql57-sidecar:v3.0.0
