@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://minio/minio docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/minio
+        skopeo copy --all docker://radondb/mysql-operator docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysql-operator
