@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://radondb/mysql57-sidecar:v3.0.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysql57-sidecar:v3.0.0
+        skopeo copy --all docker://busybox:1.32 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/busybox:1.32
