@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://radondb/kube-rbac-proxy:v0.8.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/kube-rbac-proxy:v0.8.0
+        skopeo copy --all docker://radondb/mysql-operator:v3.0.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysql-operator:v3.0.0
