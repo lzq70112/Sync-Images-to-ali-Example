@@ -46,4 +46,6 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://docker:19.03-dind docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/docker:19.03-dind
+		[[ range $index, $name := .Name ]]
+		skopeo copy --all docker://[[ $name ]] docker://[[ index $.TargetName $index ]]
+        [[ end ]]
