@@ -46,6 +46,6 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-		[[ range $index, $name := .Name ]]
-		skopeo copy --all docker://[[ $name ]] docker://[[ index $.TargetName $index ]]
-        [[ end ]]
+        skopeo copy --all docker://redis docker:/registry.cn-hangzhou.aliyuncs.com/lzq70112/redis
+        skopeo copy --all docker://mysql docker:/registry.cn-hangzhou.aliyuncs.com/lzq70112/mysql
+        skopeo copy --all docker://nginx docker:/registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx
