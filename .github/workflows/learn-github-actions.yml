@@ -47,5 +47,5 @@ jobs:
         sudo apt update
         sudo apt install skopeo -y
         skopeo copy --all docker://mysql:8.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysql:8.0
-        skopeo copy --all docker://mysqld-exporter:0.15.1-debian-11-r4 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysqld-exporter:0.15.1-debian-11-r4
         skopeo copy --all docker://gitlab-runner:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/gitlab-runner:latest
+        skopeo copy --all docker://nginx docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx
