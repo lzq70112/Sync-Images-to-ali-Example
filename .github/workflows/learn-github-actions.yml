@@ -47,5 +47,3 @@ jobs:
         sudo apt update
         sudo apt install skopeo -y
         skopeo copy --all docker://nginx docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx
-        skopeo copy --all docker://bitnami/mysql:8.0.36-debian-11-r2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysql:8.0.36-debian-11-r2
-        skopeo copy --all docker://bitnami/os-shell:11-debian-11-r95 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/os-shell:11-debian-11-r95
