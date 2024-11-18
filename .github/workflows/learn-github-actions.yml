@@ -46,4 +46,6 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://hanchuanchuan/goinception docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/goinception
+        skopeo copy --all docker://registry.cn-hangzhou.aliyuncs.com/helowin/oracle_11g docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/oracle_11g
+        skopeo copy --all docker://redis:5 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/redis:5
+        skopeo copy --all docker://mysql:5.7 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysql:5.7
