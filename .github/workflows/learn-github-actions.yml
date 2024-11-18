@@ -46,5 +46,6 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
+        skopeo copy --all docker://hhyo/archery:v1.11.3 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/archery:v1.11.3
         skopeo copy --all docker://redis:5 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/redis:5
         skopeo copy --all docker://mysql:5.7 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysql:5.7
