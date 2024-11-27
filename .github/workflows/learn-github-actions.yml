@@ -46,6 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://starrocks/cn-ubuntu:3.3-latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/cn-ubuntu:3.3-latest
-        skopeo copy --all docker://starrocks/fe-ubuntu:3.3-latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/fe-ubuntu:3.3-latest
-        skopeo copy --all docker://minio/minio:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/minio:latest
+        skopeo copy --all docker://minio/mc:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mc:latest
