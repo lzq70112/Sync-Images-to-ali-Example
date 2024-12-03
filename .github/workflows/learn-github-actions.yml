@@ -46,5 +46,5 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://registry.k8s.io/nfd/node-feature-discovery:v0.16.6 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/node-feature-discovery:v0.16.6
+        skopeo copy --all docker://kubesphere/elasticsearch-curator:v5.7.6 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/elasticsearch-curator:v5.7.6
         skopeo copy --all docker://minio/mc:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mc:latest
