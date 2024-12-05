@@ -46,5 +46,5 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://registry.cn-beijing.aliyuncs.com/kubesphereio/thanos:v0.25.2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/thanos:v0.25.2
+        skopeo copy --all docker://registry.cn-shanghai.aliyuncs.com/nocobase/nocobase:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nocobase:latest
         skopeo copy --all docker://minio/mc:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mc:latest
