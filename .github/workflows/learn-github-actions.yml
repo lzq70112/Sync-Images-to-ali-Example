@@ -47,6 +47,4 @@ jobs:
         sudo apt update
         sudo apt install skopeo -y
         skopeo copy --all docker://oamdev/alpine-k8s:1.18.2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/alpine-k8s:1.18.2
-        skopeo copy --all docker://oamdev/alpine-k8s:1.18.2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/alpine-k8s:1.18.2
-        skopeo copy --all docker://oamdev/kube-webhook-certgen:v2.4.1 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/kube-webhook-certgen:v2.4.1
         skopeo copy --all docker:// docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/
