@@ -47,5 +47,3 @@ jobs:
         sudo apt update
         sudo apt install skopeo -y
         skopeo copy --all docker://oamdev/alpine-k8s:1.18.2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/alpine-k8s:1.18.2
-        skopeo copy --all docker://registry.developers.crunchydata.com/crunchydata/crunchy-pgbackrest:ubi8-2.51-0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/crunchy-pgbackrest:ubi8-2.51-0
-        skopeo copy --all docker://registry.developers.crunchydata.com/crunchydata/crunchy-postgres:ubi8-16.3-0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/crunchy-postgres:ubi8-16.3-0
