@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://oamdev/cluster-gateway:v1.8.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/cluster-gateway:v1.8.0
+        skopeo copy --all docker://oamdev/velaux:v1.8.1 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/velaux:v1.8.1
