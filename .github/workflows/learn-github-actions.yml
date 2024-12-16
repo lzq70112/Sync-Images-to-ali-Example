@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://oamdev/vela-workflow:v0.5.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/vela-workflow:v0.5.0
+        skopeo copy --all docker://alpine:3.15 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/alpine:3.15
