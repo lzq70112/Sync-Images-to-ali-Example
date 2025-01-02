@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://alpine:3.15 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/alpine:3.15
+        skopeo copy --all docker://bitnami/os-shell:12-debian-12-r33 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/os-shell:12-debian-12-r33
