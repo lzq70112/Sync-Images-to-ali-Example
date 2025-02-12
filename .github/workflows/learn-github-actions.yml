@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://redislabs/redisinsight docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/redisinsight
+        skopeo copy --all docker://kubesphere/builder-nodejs:v3.2.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/builder-nodejs:v3.2.0
