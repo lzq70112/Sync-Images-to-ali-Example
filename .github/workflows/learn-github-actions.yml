@@ -46,4 +46,4 @@ jobs:
         
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://node:18.18.23 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/node:18.18.23
+        skopeo copy --all docker://nginx docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx
