@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://bitnami/mongodb:4.2.4-debian-10-r0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mongodb:4.2.4-debian-10-r0
+        skopeo copy --all docker://registry.developers.crunchydata.com/crunchydata/postgres-operator:ubi8-5.5.2-0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/postgres-operator:ubi8-5.5.2-0
