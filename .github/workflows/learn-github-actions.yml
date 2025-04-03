@@ -42,5 +42,5 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://skywalking.docker.scarf.sh/apache/skywalking-ui:10.2.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/skywalking-ui:10.2.0
-        skopeo copy --all docker://skywalking.docker.scarf.sh/apache/skywalking-oap-server:10.2.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/skywalking-oap-server:10.2.0
+        skopeo copy --all docker://apache/skywalking-ui:10.2.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/skywalking-ui:10.2.0
+        skopeo copy --all docker://apache/skywalking-oap-server:10.2.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/skywalking-oap-server:10.2.0
