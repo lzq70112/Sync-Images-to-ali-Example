@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://docker.io/jc21/nginx-proxy-manager:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx-proxy-manager:latest
+        skopeo copy --all docker://sonatype/nexus3 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nexus3
