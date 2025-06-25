@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://redis:5.0.7 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/redis:5.0.7
+        skopeo copy --all docker://neunnsy/activemq-metrics docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/activemq-metrics
