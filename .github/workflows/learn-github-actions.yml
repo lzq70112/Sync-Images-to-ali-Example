@@ -42,6 +42,6 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://ghcr.io/openfaas/queue-worker:0.14.2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/queue-worker:0.14.2
-        skopeo copy --all docker://ghcr.io/openfaas/gateway:0.27.12 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/gateway:0.27.12
-        skopeo copy --all docker://ghcr.io/openfaas/faas-netes:0.18.14 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/faas-netes:0.18.14
+        skopeo copy --all docker://ghcr.io/openfaas/of-watchdog:0.10.9 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/of-watchdog:0.10.9
+        skopeo copy --all docker://golang:1.24-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/golang:1.24-alpine
+        skopeo copy --all docker://alpine:3.22.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/alpine:3.22.0
