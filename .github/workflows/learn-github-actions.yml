@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://webcenter/activemq:5.14.3 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/activemq:5.14.3
+        skopeo copy --all docker://ghcr.io/openfaas/queue-worker:0.14.2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/queue-worker:0.14.2
