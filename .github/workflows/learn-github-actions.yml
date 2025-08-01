@@ -44,3 +44,4 @@ jobs:
         sudo apt install skopeo -y
         skopeo copy --all docker://tdengine/idmp-ee:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/idmp-ee:latest
         skopeo copy --all docker://tdengine/tdgpt:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/tdgpt:latest
+        skopeo copy --all docker://tdengine/tsdb-ee:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/tsdb-ee:latest
