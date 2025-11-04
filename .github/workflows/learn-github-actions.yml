@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://dpage/pgadmin4 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/pgadmin4
+        skopeo copy --all docker://redis:7-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/redis:7-alpine
