@@ -42,4 +42,5 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://ghcr.io/modsetter/surfsense_backend:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/surfsense_backend:latest
+        skopeo copy --all docker://ghcr.io/iamseth/oracledb_exporter:0.5.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/oracledb_exporter:0.5.0
+        skopeo copy --all docker:// docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/
