@@ -42,5 +42,5 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://iamseth/oracledb_exporter:0.5.1 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/oracledb_exporter:0.5.1
+        skopeo copy --all docker://oracledb_exporter:0.5.1 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/oracledb_exporter:0.5.1
         skopeo copy --all docker:// docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/
