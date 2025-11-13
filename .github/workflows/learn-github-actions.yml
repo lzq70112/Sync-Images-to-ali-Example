@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://oraclelinux:8-slim docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/oraclelinux:8-slim
+        skopeo copy --all docker://oraclelinux8-instantclient:23 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/oraclelinux8-instantclient:23
