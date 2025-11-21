@@ -49,4 +49,3 @@ jobs:
         skopeo copy --all docker://docker.elastic.co/kibana/kibana:8.12.2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/kibana:8.12.2
         skopeo copy --all docker://nginx:1.27 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx:1.27
         skopeo copy --all docker://golang:1.24.6-bookworm docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/golang:1.24.6-bookworm
-        skopeo copy --all docker://wanwulite/agentscope-base:20250723-760e2aa docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/agentscope-base:20250723-760e2aa
