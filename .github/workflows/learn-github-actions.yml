@@ -42,4 +42,11 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://ghcr.io/ibm/mcp-context-forge:0.9.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mcp-context-forge:0.9.0
+        skopeo copy --all docker://mysql:8.0.37 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mysql:8.0.37
+        skopeo copy --all docker://redis:7.0.15 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/redis:7.0.15
+        skopeo copy --all docker://minio/minio:RELEASE.2024-08-26T15-33-07Z docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/minio:RELEASE.2024-08-26T15-33-07Z
+        skopeo copy --all docker://docker.elastic.co/elasticsearch/elasticsearch:8.12.2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/elasticsearch:8.12.2
+        skopeo copy --all docker://docker.elastic.co/kibana/kibana:8.12.2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/kibana:8.12.2
+        skopeo copy --all docker://nginx:1.27 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx:1.27
+        skopeo copy --all docker://golang:1.24.6-bookworm docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/golang:1.24.6-bookworm
+        skopeo copy --all docker://wanwulite/agentscope-base:20250723-760e2aa docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/agentscope-base:20250723-760e2aa
