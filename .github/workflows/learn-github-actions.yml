@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://oraclelinux7-instantclient:21 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/oraclelinux7-instantclient:21
+        skopeo copy --all docker://ghcr.io/ibm/mcp-context-forge:0.9.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mcp-context-forge:0.9.0
