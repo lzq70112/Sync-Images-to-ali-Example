@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://amazoncorretto:11 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/amazoncorretto:11
+        skopeo copy --all docker://reasonduan/redis-manager docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/redis-manager
