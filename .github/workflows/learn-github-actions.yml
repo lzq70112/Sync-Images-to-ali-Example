@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://node:10.16.0-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/node:10.16.0-alpine
+        skopeo copy --all docker://maven:3.5-jdk-8-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/maven:3.5-jdk-8-alpine
