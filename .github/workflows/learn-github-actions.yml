@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://reasonduan/redis-manager docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/redis-manager
+        skopeo copy --all docker://alpine:3.13 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/alpine:3.13
