@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://redislabs/redismod:preview docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/redismod:preview
+        skopeo copy --all docker://docker.io/redis/redisinsight:2.54 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/redisinsight:2.54
