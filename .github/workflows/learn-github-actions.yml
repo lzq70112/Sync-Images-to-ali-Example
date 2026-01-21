@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://golang:1.24.3-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/golang:1.24.3-alpine
+        skopeo copy --all docker://ubuntu:22.04 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/ubuntu:22.04
