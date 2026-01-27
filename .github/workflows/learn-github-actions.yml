@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://milvusdb/milvus:v2.6.9 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/milvus:v2.6.9
+        skopeo copy --all docker://milvusdb/milvus:v2.6.3 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/milvus:v2.6.3
