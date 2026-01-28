@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://minio/minio:RELEASE.2023-03-20T20-16-18Z docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/minio:RELEASE.2023-03-20T20-16-18Z
+        skopeo copy --all docker://docker.io/milvusdb/etcd:3.5.5-r2 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/etcd:3.5.5-r2
