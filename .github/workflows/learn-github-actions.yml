@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://quay.io/coreos/etcd:v3.5.25 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/etcd:v3.5.25
+        skopeo copy --all docker://minio/minio:RELEASE.2024-12-18T13-15-44Z docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/minio:RELEASE.2024-12-18T13-15-44Z
