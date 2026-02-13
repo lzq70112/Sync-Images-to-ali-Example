@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://quay.io/prometheuscommunity/postgres-exporter docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/postgres-exporter
+        skopeo copy --all docker://pgpool/pgpool2_exporter:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/pgpool2_exporter:latest
