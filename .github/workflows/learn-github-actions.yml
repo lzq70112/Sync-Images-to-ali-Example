@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://pgpool/pgpool2_exporter:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/pgpool2_exporter:latest
+        skopeo copy --all docker://registry.cn-beijing.aliyuncs.com/kubesphereio/builder-python:v3.2.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/builder-python:v3.2.0
