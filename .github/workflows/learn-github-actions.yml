@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://python:3.12.3-slim docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/python:3.12.3-slim
+        skopeo copy --all docker://registry.cn-hangzhou.aliyuncs.com/ghcr/coder/code-server:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/code-server:latest
