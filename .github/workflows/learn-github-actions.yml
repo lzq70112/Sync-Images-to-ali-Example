@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://lscr.io/linuxserver/code-server:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/code-server:latest
+        skopeo copy --all docker://postgres:17 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/postgres:17
