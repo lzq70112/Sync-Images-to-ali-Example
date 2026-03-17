@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://ghcr.io/mcpjungle/mcpjungle:latest-stdio docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mcpjungle:latest-stdio
+        skopeo copy --all docker://node:22-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/node:22-alpine
