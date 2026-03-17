@@ -43,3 +43,5 @@ jobs:
         sudo apt update
         sudo apt install skopeo -y
         skopeo copy --all docker://node:22-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/node:22-alpine
+        skopeo copy --all docker://golang:1.24-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/golang:1.24-alpine
+        skopeo copy --all docker://alpine:3.20 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/alpine:3.20
