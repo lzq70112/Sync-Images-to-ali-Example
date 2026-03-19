@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://golang:1.25-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/golang:1.25-alpine
+        skopeo copy --all docker://mitmproxy/mitmproxy docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mitmproxy
