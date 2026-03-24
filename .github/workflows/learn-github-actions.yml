@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://mitmproxy/mitmproxy docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/mitmproxy
+        skopeo copy --all docker://ingress-nginx-kube-webhook-certgen:v1.1.1 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/ingress-nginx-kube-webhook-certgen:v1.1.1
