@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://nginx docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx
+        skopeo copy --all docker://mcr.microsoft.com/dotnet/sdk:8.0 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/sdk:8.0
