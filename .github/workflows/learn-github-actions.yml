@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://nginx:alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx:alpine
+        skopeo copy --all docker://nginx/nginx-prometheus-exporter:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx-prometheus-exporter:latest
