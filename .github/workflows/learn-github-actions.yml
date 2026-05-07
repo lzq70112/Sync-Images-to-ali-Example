@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://jefferyhcool/bilinote:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/bilinote:latest
+        skopeo copy --all docker://ghcr.io/jefferyhcool/bilinote:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/bilinote:latest
