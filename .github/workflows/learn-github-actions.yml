@@ -42,8 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://ghcr.io/iflytek/skillhub-server docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/skillhub-server
-        skopeo copy --all docker://ghcr.io/iflytek/skillhub-web docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/skillhub-web
-        skopeo copy --all docker://ghcr.io/iflytek/skillhub-scanner docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/skillhub-scanner
-        skopeo copy --all docker://postgres:16-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/postgres:16-alpine
-        skopeo copy --all docker://redis:7-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/redis:7-alpine
+        skopeo copy --all docker://python:3.11-slim docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/python:3.11-slim
