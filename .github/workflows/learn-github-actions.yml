@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://dataease/sqlbot:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/sqlbot:latest
+        skopeo copy --all docker://ubuntu:22.04 docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/ubuntu:22.04
