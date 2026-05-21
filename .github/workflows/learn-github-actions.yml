@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://grafana/grafana:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/grafana:latest
+        skopeo copy --all docker://nginx:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/nginx:latest
