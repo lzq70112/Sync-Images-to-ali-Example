@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://apache/apisix:2.15.0-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/apisix:2.15.0-alpine
+        skopeo copy --all docker://node:20-slim docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/node:20-slim
