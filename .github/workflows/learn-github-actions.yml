@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://node:20-slim docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/node:20-slim
+        skopeo copy --all docker://xiahan2019/olah:lastet docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/olah:lastet
