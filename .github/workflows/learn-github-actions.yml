@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://node:22.19.0-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/node:22.19.0-alpine
+        skopeo copy --all docker://node:20.19.4-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/node:20.19.4-alpine
