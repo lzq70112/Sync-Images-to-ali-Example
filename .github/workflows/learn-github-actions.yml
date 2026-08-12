@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://node:20.19.4-alpine docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/node:20.19.4-alpine
+        skopeo copy --all docker://dayuanjiang/next-ai-draw-io:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/next-ai-draw-io:latest
