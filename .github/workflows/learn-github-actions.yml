@@ -10,37 +10,47 @@ on:
   pull_request:
     branches: [ "main" ]
  
- 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
- 
  
 # 2.添加一个job来执行同步操作。在workflow文件中，添加一个job 并指定使用的操作系统环境。
 # 工作流程任务（通常含有一个或多个步骤）
 jobs:
   syncimages:
     runs-on: ubuntu-latest
-    # 在job中添加步骤来执行同步操作。在上述job中，添加步骤来执行skopeo命令，从registry.k8s.io仓库拉取镜像，并将其推送到阿里云仓库。
+    
     steps:
     - name: Checkout Repos
       uses: actions/checkout@v3
       
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2.9.1
+      
     # 登录到阿里云镜像仓库  
     - name: Login to Alibaba Cloud Container Registry  
       env:  
         username: ${{ secrets.DOCKER_USERNAME }}  
         password: ${{ secrets.DOCKER_PASSWORD }}
-# 在GitHub仓库的Secrets中设置这个密码  
       run: |  
         echo "$password" | docker login --username="$username" --password-stdin registry.cn-hangzhou.aliyuncs.com
     
-    # 使用shell命令批量同步所需的镜像到阿里云镜像仓库中
-    - name: Use Skopeo Tools Sync Image to ali
+    # 替换 skopeo，使用更智能的 regctl 批量同步所需的镜像到阿里云镜像仓库中
+    - name: Use Regctl Tools Sync Image to ali
       run: |
         #!/usr/bin/env bash
-        sudo apt update
-        sudo apt install skopeo -y
-        skopeo copy --format v2s2
-        skopeo copy  --format v2s2 --remove-signatures --multi-arch=all docker://lmsysorg/sglang:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/sglang:latest
+        set -e
+        
+        # 1. 下载并安装最新的 regctl 工具
+        echo "Installing regctl..."
+        curl -L https://release-assets.githubusercontent.com/github-production-release-asset/294181202/2bd75f27-8713-4452-8417-6417c50ec477?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-09-01T02%3A20%3A13Z&rscd=attachment%3B+filename%3Dregbot-linux-amd64&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-09-01T01%3A19%3A54Z&ske=2026-09-01T02%3A20%3A13Z&sks=b&skv=2018-11-09&sig=CST9rsK1veen%2B%2B2nO9A65t1vutgJznyYhImA8THBG70%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4ODIyODMyNSwibmJmIjoxNzg4MjI2NTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xmtK4IRjB8U0tf4uE8HrBeUt4jFgCe1ZF-4BJZa0Ois&response-content-disposition=attachment%3B%20filename%3Dregbot-linux-amd64&response-content-type=application%2Foctet-stream > regctl
+        chmod +x regctl
+        sudo mv regctl /usr/local/bin/
+        
+        # 2. 因为前面已经执行了 docker login，regctl 会自动复用已登录的凭证进行推送
+        echo "Starting image sync..."
+        regctl image copy \
+          --format v2s2 \
+          docker://lmsysorg/sglang:latest \
+          docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/sglang:latest
+          
+        echo "Sync completed successfully!"
