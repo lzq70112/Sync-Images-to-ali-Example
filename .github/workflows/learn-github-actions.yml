@@ -50,6 +50,7 @@ jobs:
         echo "Starting image sync..."
         regctl image copy \
           --format v2s2 \
+          --platform linux/amd64 \
           lmsysorg/sglang:latest \
           registry.cn-hangzhou.aliyuncs.com/lzq70112/sglang:latest
           
