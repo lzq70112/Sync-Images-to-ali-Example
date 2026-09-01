@@ -40,10 +40,9 @@ jobs:
         set -e
         
         echo "Starting multi-architecture image sync with OCI filtering..."
-        
-        docker buildx imagetools create \
-          --platform linux/amd64 \
-          --tag registry.cn-hangzhou.aliyuncs.com/lzq70112/sglang:latest \
-          lmsysorg/sglang:latest
+        docker pull lmsysorg/sglang:latest
+        docker tag lmsysorg/sglang:latest registry.cn-hangzhou.aliyuncs.com/lzq70112/sglang:latest
+        docker push registry.cn-hangzhou.aliyuncs.com/lzq70112/sglang:latest
+
           
         echo "Sync completed successfully!"
