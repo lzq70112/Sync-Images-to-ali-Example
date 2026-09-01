@@ -42,4 +42,4 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://ghcr.io/dayuanjiang/next-ai-draw-io:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/next-ai-draw-io:latest
+        skopeo copy --all docker://lmsysorg/sglang:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/sglang:latest
