@@ -42,7 +42,7 @@ jobs:
         
         # 1. 下载并安装最新的 regctl 工具
         echo "Installing regctl..."
-        curl -L https://release-assets.githubusercontent.com/github-production-release-asset/294181202/2bd75f27-8713-4452-8417-6417c50ec477?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-09-01T02%3A20%3A13Z&rscd=attachment%3B+filename%3Dregbot-linux-amd64&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-09-01T01%3A19%3A54Z&ske=2026-09-01T02%3A20%3A13Z&sks=b&skv=2018-11-09&sig=CST9rsK1veen%2B%2B2nO9A65t1vutgJznyYhImA8THBG70%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc4ODIyODMyNSwibmJmIjoxNzg4MjI2NTI1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.xmtK4IRjB8U0tf4uE8HrBeUt4jFgCe1ZF-4BJZa0Ois&response-content-disposition=attachment%3B%20filename%3Dregbot-linux-amd64&response-content-type=application%2Foctet-stream > regctl
+        curl -L https://github.com/regclient/regclient/releases/download/v0.11.6-rc1/regctl-linux-amd64 > regctl
         chmod +x regctl
         sudo mv regctl /usr/local/bin/
         
