@@ -1,4 +1,3 @@
-# 1.首先，在workflow文件中定义触发器，例如每次推送到主分支时触发同步操作。
 # 工作流名称
 name: Sync-Images-to-ali-Example
 # 工作流运行时显示名称
@@ -13,8 +12,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
  
-# 2.添加一个job来执行同步操作。在workflow文件中，添加一个job 并指定使用的操作系统环境。
-# 工作流程任务（通常含有一个或多个步骤）
+# 工作流程任务
 jobs:
   syncimages:
     runs-on: ubuntu-latest
@@ -23,8 +21,9 @@ jobs:
     - name: Checkout Repos
       uses: actions/checkout@v3
       
+    # 初始化并启用官方 Buildx 引擎
     - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2.9.1
+      uses: docker/setup-buildx-action@v3
       
     # 登录到阿里云镜像仓库  
     - name: Login to Alibaba Cloud Container Registry  
@@ -32,26 +31,19 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}  
         password: ${{ secrets.DOCKER_PASSWORD }}
       run: |  
-        echo "$password" | docker login --username="$username" --password-stdin registry.cn-hangzhou.aliyuncs.com
+        echo "$password" | docker login --username="$username" --password-stdin ://aliyuncs.com
     
-    # 替换 skopeo，使用更智能的 regctl 批量同步所需的镜像到阿里云镜像仓库中
-    - name: Use Regctl Tools Sync Image to ali
+    # 使用 Buildx 跨仓库直接中转多架构镜像，并剥离不兼容的 OCI 属性
+    - name: Sync and Strip OCI Manifest via Buildx
       run: |
         #!/usr/bin/env bash
         set -e
         
-        # 1. 下载并安装最新的 regctl 工具
-        echo "Installing regctl..."
-        curl -L https://github.com/regclient/regclient/releases/download/v0.11.6-rc1/regctl-linux-amd64 > regctl
-        chmod +x regctl
-        sudo mv regctl /usr/local/bin/
+        echo "Starting multi-architecture image sync with OCI filtering..."
         
-        # 2. 因为前面已经执行了 docker login，regctl 会自动复用已登录的凭证进行推送
-        echo "Starting image sync..."
-        regctl image copy \
-          --format v2s2 \
-          --platform linux/amd64 \
-          lmsysorg/sglang:latest \
-          registry.cn-hangzhou.aliyuncs.com/lzq70112/sglang:latest
+        docker buildx imagetools create \
+          --tag ://aliyuncs.com/lzq70112/sglang:latest \
+          --provenance=false \
+          lmsysorg/sglang:latest
           
         echo "Sync completed successfully!"
