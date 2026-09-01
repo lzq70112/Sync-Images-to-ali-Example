@@ -44,7 +44,6 @@ jobs:
         docker buildx imagetools create \
           --platform linux/amd64,linux/arm64 \
           --tag registry.cn-hangzhou.aliyuncs.com/lzq70112/pgvector:16-alpine \
-          --provenance=false \
           lmsysorg/sglang:latest
           
         echo "Sync completed successfully!"
