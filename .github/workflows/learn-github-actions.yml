@@ -42,4 +42,5 @@ jobs:
         #!/usr/bin/env bash
         sudo apt update
         sudo apt install skopeo -y
-        skopeo copy --all docker://lmsysorg/sglang:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/sglang:latest
+        skopeo copy --format v2s2
+        skopeo copy --all --format v2s2 docker://lmsysorg/sglang:latest docker://registry.cn-hangzhou.aliyuncs.com/lzq70112/sglang:latest
