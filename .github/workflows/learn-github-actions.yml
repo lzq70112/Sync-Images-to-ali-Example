@@ -41,8 +41,8 @@ jobs:
         
         echo "Starting multi-architecture image sync with OCI filtering..."
         docker pull lmsysorg/sglang:glm-5.3-flash
-        docker tag lmsysorg/sglang:glm-5.3-flash registry.cn-hangzhou.aliyuncs.com/lzq70112/lmsysorg/sglang:glm-5.3-flash
-        docker push registry.cn-hangzhou.aliyuncs.com/lzq70112/lmsysorg/sglang:glm-5.3-flash
+        docker tag lmsysorg/sglang:glm-5.3-flash registry.cn-hangzhou.aliyuncs.com/lzq70112/sglang:glm-5.3-flash
+        docker push registry.cn-hangzhou.aliyuncs.com/lzq70112/sglang:glm-5.3-flash
 
           
         echo "Sync completed successfully!"
